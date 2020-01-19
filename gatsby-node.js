@@ -27,12 +27,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
-        const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "created")) {
+        const date = moment(
+          node.frontmatter.created,
+          siteConfig.dateFromFormat
+        );
         if (!date.isValid)
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
-        createNodeField({ node, name: "date", value: date.toISOString() });
+        createNodeField({ node, name: "created", value: date.toISOString() });
       }
     }
     createNodeField({ node, name: "slug", value: slug });
@@ -60,7 +63,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               tags
               categories
-              date
+              created
               layout
             }
           }
@@ -82,12 +85,12 @@ exports.createPages = async ({ graphql, actions }) => {
   // Sort posts
   postsEdges.sort((postA, postB) => {
     const dateA = moment(
-      postA.node.frontmatter.date,
+      postA.node.frontmatter.created,
       siteConfig.dateFromFormat
     );
 
     const dateB = moment(
-      postB.node.frontmatter.date,
+      postB.node.frontmatter.created,
       siteConfig.dateFromFormat
     );
 
@@ -115,52 +118,55 @@ exports.createPages = async ({ graphql, actions }) => {
   }); */
 
   // Post page creating
-  postsEdges
-    .filter(post => post.node.frontmatter.layout == "post")
-    .forEach((edge, index) => {
-      // Generate a list of tags
-      if (edge.node.frontmatter.tags) {
-        edge.node.frontmatter.tags.forEach(tag => {
-          tagSet.add(tag);
-        });
-      }
+  const posts = postsEdges.filter(
+    post => post.node.frontmatter.layout == "post"
+  );
 
-      // Generate a list of categories
-      if (edge.node.frontmatter.category) {
-        categorySet.add(edge.node.frontmatter.category);
-      }
-
-      // Create post pages
-      const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-      const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
-      const nextEdge = postsEdges[nextID];
-      const prevEdge = postsEdges[prevID];
-
-      createPage({
-        path: edge.node.fields.slug,
-        component: postPage,
-        context: {
-          slug: edge.node.fields.slug,
-          nexttitle: nextEdge.node.frontmatter.title,
-          nextslug: nextEdge.node.fields.slug,
-          prevtitle: prevEdge.node.frontmatter.title,
-          prevslug: prevEdge.node.fields.slug
-        }
+  posts.forEach((edge, index) => {
+    // Generate a list of tags
+    if (edge.node.frontmatter.tags) {
+      edge.node.frontmatter.tags.forEach(tag => {
+        tagSet.add(tag);
       });
+    }
+
+    // Generate a list of categories
+    if (edge.node.frontmatter.category) {
+      categorySet.add(edge.node.frontmatter.category);
+    }
+
+    // Create post pages
+    const prevID = index + 1 < posts.length ? index + 1 : 0;
+    const nextID = index - 1 >= 0 ? index - 1 : posts.length - 1;
+    const nextEdge = posts[nextID];
+    const prevEdge = posts[prevID];
+
+    createPage({
+      path: edge.node.fields.slug,
+      component: postPage,
+      context: {
+        slug: edge.node.fields.slug,
+        nexttitle: nextEdge.node.frontmatter.title,
+        nextslug: nextEdge.node.fields.slug,
+        prevtitle: prevEdge.node.frontmatter.title,
+        prevslug: prevEdge.node.fields.slug
+      }
     });
+  });
 
   // Page creation
-  postsEdges
-    .filter(post => post.node.frontmatter.layout == "page")
-    .forEach((edge, index) => {
-      createPage({
-        path: edge.node.fields.slug,
-        component: pagePage,
-        context: {
-          slug: edge.node.fields.slug
-        }
-      });
+  const pages = postsEdges.filter(
+    post => post.node.frontmatter.layout == "page"
+  );
+  pages.forEach((edge, index) => {
+    createPage({
+      path: edge.node.fields.slug,
+      component: pagePage,
+      context: {
+        slug: edge.node.fields.slug
+      }
     });
+  });
 
   //  Create tag pages
   tagSet.forEach(tag => {

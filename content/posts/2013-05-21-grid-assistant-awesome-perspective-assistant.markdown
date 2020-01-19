@@ -1,16 +1,16 @@
 ---
-date: 2013-05-21 19:02:25+00:00
-layout: post
+created: 2013-05-21
+edited: 2020-01-19
 title: Grid + Assistant = Awesome Perspective Assistant
+layout: post
+archived: true
 categories:
   - Krita
 tags:
   - perspective assistant
 ---
 
-Been quiet some time since my last blog about [Krita](https://www.krita.org), well, I had been a bit busy with college work. Nonetheless, with whatever time I had, and all the help from Boud, I have been able to import a particular feature from the Perspective Grid to the Perspective Assistant.
-
-# A little background
+Been quiet some time since my last blog about [Krita](https://www.krita.org), as I had been a bit busy with college work. Nonetheless, with whatever time I had, and all the help from Boud, I have been able to import a particular feature from the Perspective Grid to the Perspective Assistant.
 
 ## _Perspective Grid_
 
@@ -18,17 +18,17 @@ The Perspective Grid(here on referred to as Grid, sounds very formal :-P) is a g
 
 Images are taken from [Cyrille Berger's blog](http://blog.cberger.net/2006/07/22/perspective-grid/) about Perspective Grid
 
-[caption id="" align="aligncenter" width="363"]![](https://userbase.kde.org/images.userbase/a/a3/Multigrid.png)](https://userbase.kde.org/images.userbase/a/a3/Multigrid.png) Perspective Grid in Krita[/caption]
+![Perspective Grid in Krita](../images/perspectivegrid.png)
 
 The grid acts as a guide for the artist to draw parallel lines on the canvas, using line tool or similar straight line tool.
 
-[caption id="attachment_58" align="aligncenter" width="350"]![Demo of the Perspective Grid](https://shivaramaniyer.ind.in/wp-content/uploads/2013/05/krita-perspectivegrid3.png?w=584)](https://shivaramaniyer.ind.in/wp-content/uploads/2013/05/krita-perspectivegrid3.png) Demo of the Perspective Grid[/caption]
+![Demo of the Perspective Grid](../images/krita-perspectivegridexample.png)
 
 ## _Perspective Assistant_
 
 The Perspective Assistant(here on referred to as Assistant, still feels the same :-) ) is similar in looks to the Grid but unlike the Grid, with Assistant an artist can draw straight lines using the freehand tool too. This is achieved by checking the assistant checkbox after selecting the freehand tool.
 
-[caption id="attachment_29" align="aligncenter" width="350"]![A structure made using the assistants](https://shivaramaniyer.ind.in/wp-content/uploads/2012/05/screenshot-from-2012-05-29-134549.png?w=584)](https://shivaramaniyer.ind.in/wp-content/uploads/2012/05/screenshot-from-2012-05-29-134549.png) A structure made using the assistants[/caption]
+![A structure made using the assistants](../images/krita-perspectivegridexample2.png)
 
 On checking the "assistant" checkbox, the user can just draw on the grid and the assistant will itself draw the straight line with respect to the grid created.
 
@@ -50,8 +50,8 @@ I am not saying that the Grid is a drawback. It was created with a different pur
 
 What else? The Assistant now has these side handles and works really fine :D.
 
-[caption id="attachment_83" align="aligncenter" width="490"]![Perspective assistant showing the side handles at work](https://shivaramaniyer.ind.in/wp-content/uploads/2013/05/screenshot-from-2013-05-22-001338.png?w=490)](https://shivaramaniyer.ind.in/wp-content/uploads/2013/05/screenshot-from-2013-05-22-001338.png) Perspective assistant showing the side handles at work[/caption]
+![Perspective assistant showing the side handles at work](../images/perspectivegrid-completed.png)
 
-Although, now that I think of I should include technical details! I guess I will, but not now. Soon? definitely.
+Although, now that I think of I should include technical details! I guess I will, but not now.
 
 To all the artists, please use the new feature and give us your feedbacks wherever you want. My IRC nick is sraman on #krita, email id is [sra392@gmail.com](mailto:sra392@gmail.com) or even here. Awaiting eagerly :-).

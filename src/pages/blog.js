@@ -29,7 +29,7 @@ export default BlogPage;
 export const query = graphql`
   {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { fields: frontmatter___created, order: DESC }
       filter: { frontmatter: { layout: { eq: "post" } } }
     ) {
       edges {
@@ -38,7 +38,7 @@ export const query = graphql`
             slug
           }
           frontmatter {
-            date
+            created
             categories
             title
           }

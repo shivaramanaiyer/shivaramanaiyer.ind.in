@@ -1,7 +1,9 @@
 ---
-date: 2014-03-05 16:41:27+00:00
-layout: post
+created: 2014-03-05
+edited: 2020-01-19
 title: New Perspective Tool for Krita
+layout: post
+archived: true
 categories:
   - Krita
 ---
@@ -16,15 +18,15 @@ Well, I can go on about with the idea and the concept of this new tool, but then
 
 ### The tool:
 
-[caption id="" align="alignnone" width="710"]![https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_02.jpg](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_02.jpg)](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_02.jpg) The tool showing all the three vanishing points, the horizon(line joining the red and green points)[/caption]
+![](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_02.jpg)
 
 As it can be seen in the image above the tool looks very much like the Perspective Assistant with the difference that instead of the standard 2-D grid this tool will have a 3-D (although it would seem 2-D only because of the image) grid, which will be manipulated by the three vanishing points, Red, Blue and Green dots. And three different coloured grid lines converging to the corresponding vanishing point. The Green and Red vanishing points are connected by a line called the horizon line(Forgive me for my mistakes on these technicalities, I am not very sure of the terms myself).
 
 The grid adapts with the change in the position of the vanishing points and also with the removal of the individual points. This is shown in the following images
 
-[caption id="" align="alignnone" width="710"]![https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_03.jpg](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_03.jpg)](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_03.jpg) The Grid Adapts to the removal of one of the Vanishing points(Blue) getting removed by making the grid behave as if the blue point is in infinity[/caption]
+![](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_03.jpg)
 
-[caption id="" align="alignleft" width="710"]![https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_08.jpg](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_08.jpg)](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_08.jpg) Single Vanishing point(A special case)[/caption]
+![](https://www.davidrevoy.com/data/images/blog/2013/02/krita-perspective/2013-02-03_krita-perspective_design_08.jpg)
 
 Well I would like to explain the above image that is the special case. By design the Red vanishing point cannot be deleted and as soon as the Green point is deleted the Grey dot comes in place but such that it is stuck on the edge of the grid. This Grey point helps the user to just tilt the horizon line.
 
@@ -34,40 +36,13 @@ All in all this tool will be able to help the user to be able to get the perspec
 
 Please wait a minute, let me go through my drafts to fetch the mail I had saved for reference! Oh, there it is. Well, without further ado here is the proposed plan that I have thought of.
 
-1.
-
-
-    Basic setup(3 axes and their movement)
-
-2.
-
-
-    removing of the points and their effects
-
-3.
-
-
-    colour schemes of the points
-
-4.
-
-
-    grid density + line width (if possible earlier too)
-
-5.
-
-
-    single vanishing point
-
-6.
-
-
-    grid able to guide the freehand tool
-
-7.
-
-
-    'Bake' button
+1. Basic setup(3 axes and their movement)
+2. removing of the points and their effects
+3. colour schemes of the points
+4. grid density + line width (if possible earlier too)
+5. single vanishing point
+6. grid able to guide the freehand tool
+7. 'Bake' button
 
 Well, you can say that the timeline is just a modularisation of David's blog, but, then as I said the [blog](https://davidrevoy.com/article159/design-ideas-for-a-new-krita-perspective-tool) is brilliantly written. So, that is what the plan is! Let's hope it can be achieved in good time and there will be a new tool among many added to Krita. Although, as it can be seen there isn't any specific timeline, but just steps to go through the whole process.
 
@@ -79,4 +54,4 @@ This being my first time creating a new tool, my first step was to make a copy o
 
 Although at the time of writing this blog, I have been able to accomplish only the first part, i.e. copying the files and modifying them such that they can be build. I am hoping to be able to complete the next step in the next few days, and the details of the hack will be put up in the next blog. Until then, keep Sketching!
 
-**PS: ** Any comments on the idea/coding is appreciated. Also if anyone has a prior experience and would like to help, you are most welcome!
+**PS:** Any comments on the idea/coding is appreciated. Also if anyone has a prior experience and would like to help, you are most welcome!

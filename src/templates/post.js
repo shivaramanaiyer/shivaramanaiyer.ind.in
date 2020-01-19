@@ -34,9 +34,9 @@ export default class PostTemplate extends React.Component {
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
             <h1>{post.title}</h1>
+            <PostTags tags={post.tags} />
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
-              <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
               <SiblingLinks config={pageContext} />
             </div>
@@ -59,13 +59,14 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        date
+        created
+        edited
         categories
         tags
       }
       fields {
         slug
-        date
+        created
       }
     }
   }
