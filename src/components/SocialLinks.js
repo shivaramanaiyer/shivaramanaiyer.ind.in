@@ -14,8 +14,7 @@ import {
   RedditIcon
 } from "react-share";
 import urljoin from "url-join";
-import config from "../../../data/SiteConfig";
-import "./SocialLinks.css";
+import config from "../../data/SiteConfig";
 
 class SocialLinks extends Component {
   render() {
@@ -52,9 +51,6 @@ class SocialLinks extends Component {
         >
           <LinkedinIcon round size={iconSize} />
         </LinkedinShareButton>
-        <TelegramShareButton url={url}>
-          <TelegramIcon round size={iconSize} />
-        </TelegramShareButton>
       </div>
     );
   }

@@ -1,8 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
-import "./index.css";
-import Navigation from "../components/Navigation/Navigation";
+import Navigation from "../components/Navigation";
 
 export default class MainLayout extends React.Component {
   render() {

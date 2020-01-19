@@ -1,12 +1,7 @@
 ---
-author: shivadmin
-comments: true
 date: 2012-05-29 08:31:59+00:00
 layout: post
-link: https://shivaramaniyer.ind.in/2012/05/29/saving-and-loading-of-assistants/
-slug: saving-and-loading-of-assistants
 title: Saving and Loading of Assistants
-wordpress_id: 26
 categories:
 - GSoC
 - Krita
