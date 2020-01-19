@@ -12,7 +12,9 @@ export default class Navigation extends React.Component {
           </div>
           <div className="nav-links">
             {menuItems.map(menuItem => (
-              <Link to={menuItem.to}>{menuItem.label}</Link>
+              <Link to={menuItem.to} key={menuItem.to}>
+                {menuItem.label}
+              </Link>
             ))}
           </div>
         </div>

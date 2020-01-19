@@ -18,12 +18,6 @@ export default class PostTemplate extends React.Component {
     const { slug } = pageContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
-    if (!post.id) {
-      post.id = slug;
-    }
-    if (!post.category_id) {
-      post.category_id = config.postDefaultCategoryID;
-    }
     return (
       <Layout>
         <div>
@@ -34,12 +28,6 @@ export default class PostTemplate extends React.Component {
           <div>
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
-            </div>
-            <UserInfo config={config} />
-            <Disqus postNode={postNode} />
             <Footer config={config} />
           </div>
         </div>
@@ -53,15 +41,11 @@ export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      timeToRead
-      excerpt
       frontmatter {
         title
-        date
       }
       fields {
         slug
-        date
       }
     }
   }

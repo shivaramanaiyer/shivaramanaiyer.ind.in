@@ -9,7 +9,6 @@ import PostListing from "../components/PostListing";
 class BlogPage extends Component {
   render() {
     const { edges } = this.props.data.allMarkdownRemark;
-    console.log(edges);
     return (
       <Layout>
         <div className="about-container">
@@ -26,8 +25,6 @@ class BlogPage extends Component {
 }
 
 export default BlogPage;
-
-const ComponentName = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>;
 
 export const query = graphql`
   {

@@ -61,6 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
               tags
               categories
               date
+              layout
             }
           }
         }
@@ -114,37 +115,52 @@ exports.createPages = async ({ graphql, actions }) => {
   }); */
 
   // Post page creating
-  postsEdges.forEach((edge, index) => {
-    // Generate a list of tags
-    if (edge.node.frontmatter.tags) {
-      edge.node.frontmatter.tags.forEach(tag => {
-        tagSet.add(tag);
-      });
-    }
-
-    // Generate a list of categories
-    if (edge.node.frontmatter.category) {
-      categorySet.add(edge.node.frontmatter.category);
-    }
-
-    // Create post pages
-    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
-    const nextEdge = postsEdges[nextID];
-    const prevEdge = postsEdges[prevID];
-
-    createPage({
-      path: edge.node.fields.slug,
-      component: postPage,
-      context: {
-        slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter.title,
-        nextslug: nextEdge.node.fields.slug,
-        prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
+  postsEdges
+    .filter(post => post.node.frontmatter.layout == "post")
+    .forEach((edge, index) => {
+      // Generate a list of tags
+      if (edge.node.frontmatter.tags) {
+        edge.node.frontmatter.tags.forEach(tag => {
+          tagSet.add(tag);
+        });
       }
+
+      // Generate a list of categories
+      if (edge.node.frontmatter.category) {
+        categorySet.add(edge.node.frontmatter.category);
+      }
+
+      // Create post pages
+      const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
+      const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
+      const nextEdge = postsEdges[nextID];
+      const prevEdge = postsEdges[prevID];
+
+      createPage({
+        path: edge.node.fields.slug,
+        component: postPage,
+        context: {
+          slug: edge.node.fields.slug,
+          nexttitle: nextEdge.node.frontmatter.title,
+          nextslug: nextEdge.node.fields.slug,
+          prevtitle: prevEdge.node.frontmatter.title,
+          prevslug: prevEdge.node.fields.slug
+        }
+      });
     });
-  });
+
+  // Page creation
+  postsEdges
+    .filter(post => post.node.frontmatter.layout == "page")
+    .forEach((edge, index) => {
+      createPage({
+        path: edge.node.fields.slug,
+        component: pagePage,
+        context: {
+          slug: edge.node.fields.slug
+        }
+      });
+    });
 
   //  Create tag pages
   tagSet.forEach(tag => {

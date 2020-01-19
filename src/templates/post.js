@@ -6,6 +6,7 @@ import UserInfo from "../components/UserInfo";
 import Disqus from "../components/Disqus";
 import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks";
+import SiblingLinks from "../components/SiblingLinks";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
@@ -37,6 +38,7 @@ export default class PostTemplate extends React.Component {
             <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
+              <SiblingLinks config={pageContext} />
             </div>
             <UserInfo config={config} />
             <Disqus postNode={postNode} />
