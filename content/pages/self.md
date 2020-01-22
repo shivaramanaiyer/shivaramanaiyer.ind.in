@@ -1,6 +1,6 @@
 ---
 title: About me
-slug: this
+slug: self
 layout: page
 ---
 

@@ -1,0 +1,7 @@
+@import "./base/variables.scss";
+@import "./components/layout.scss";
+
+a,
+a:visited {
+  color: $link-colour;
+}

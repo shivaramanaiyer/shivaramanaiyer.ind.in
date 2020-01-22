@@ -48,7 +48,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const pagePage = path.resolve("src/templates/page.js");
   const tagPage = path.resolve("src/templates/tag.js");
   const categoryPage = path.resolve("src/templates/category.js");
-  const listingPage = path.resolve("./src/templates/listing.js");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`

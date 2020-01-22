@@ -1,0 +1,22 @@
+/**
+ * Variables
+ * =========
+ * All the variables used in the scss files and other configurational items stored here.
+ */
+
+/* Colours */
+
+$background-colour: #eeeeee;
+$font-colour: #333333;
+$primary-colour: #33658a;
+$secondary-colour: #ff6b35;
+$accent-colour: #f7c59f;
+$tertiary-colour: #004e89;
+$green: #5cab7d;
+$red: #c1292e;
+
+$max-width: 1200px;
+
+$primary-hover: lighten($primary-colour, 25%);
+$secondary-hover: lighten($secondary-colour, 25%);
+$link-colour: $primary-colour;

@@ -5,7 +5,7 @@ export default class Navigation extends React.Component {
   render() {
     const { menuItems } = this.props;
     return (
-      <div className="nav">
+      <nav className="nav">
         <div className="nav-container">
           <div className="brand">
             <Link to="/">Shivaraman Aiyer</Link>
@@ -18,7 +18,7 @@ export default class Navigation extends React.Component {
             ))}
           </div>
         </div>
-      </div>
+      </nav>
     );
   }
 }

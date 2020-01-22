@@ -9,7 +9,6 @@ class IndexPage extends Component {
       <Layout>
         <div className="about-container">
           <Helmet title={`${config.siteTitle}`} />
-          just a test
         </div>
       </Layout>
     );
