@@ -56,6 +56,7 @@ nav {
 
   .left {
     flex: 1 1;
+    margin-right: 2.5rem;
 
     img {
       width: 100%;
@@ -64,6 +65,5 @@ nav {
   }
   .right {
     flex: 4 1;
-    margin-right: 2.5rem;
   }
 }
