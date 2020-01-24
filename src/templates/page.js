@@ -14,7 +14,7 @@ export default class PostTemplate extends React.Component {
     const post = postNode.frontmatter;
     return (
       <Layout>
-        <div>
+        <div className="container">
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>

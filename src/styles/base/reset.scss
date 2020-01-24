@@ -1,0 +1,13 @@
+// Reset box sizing to border box
+html {
+  box-sizing: border-box;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: $font-colour;
+  background-color: $background-colour;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -43,7 +43,7 @@ const config = {
   menuItems: [
     {
       label: "About",
-      to: "/this"
+      to: "/self"
     },
     {
       label: "Blog",
