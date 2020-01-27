@@ -5,9 +5,9 @@ nav {
   left: 0;
   padding: 2rem 0;
   background-color: #ffffff;
-  box-shadow: gray 0px 0px 10px;
 
   .nav-container {
+    max-width: $max-width;
     padding: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -32,6 +32,10 @@ nav {
   }
 }
 
+/**
+  * Content Area
+  */
+
 .main-content {
   margin-top: 6rem;
   padding-top: 2rem;
@@ -45,12 +49,20 @@ nav {
 }
 
 /**
+  * Page
+  */
+
+h1.page-title {
+  margin-bottom: 2rem;
+  color: $primary-colour;
+}
+
+/**
   * HOME
   */
 .hero {
   display: flex;
   align-items: center;
-  background-color: #e7e7e7;
   padding: 2rem;
   border-radius: 0.5rem;
 
@@ -65,5 +77,47 @@ nav {
   }
   .right {
     flex: 4 1;
+  }
+}
+
+/**
+  * Blog pages
+  */
+.post-item {
+  padding: 1rem;
+  background-color: lighten(pink, 5%);
+  color: $primary-colour;
+  border: 2px solid maroon;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  .post-name {
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+  }
+
+  .post-details {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/**
+  * Sibling Links
+  */
+
+.sibling-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  .prev::before {
+    content: "<";
+  }
+
+  .next::after {
+    content: ">";
   }
 }

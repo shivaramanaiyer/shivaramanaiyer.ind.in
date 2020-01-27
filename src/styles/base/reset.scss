@@ -11,3 +11,26 @@ html {
 *::after {
   box-sizing: border-box;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-colour;
+}
+
+blockquote {
+  background-color: lighten($secondary-colour, 15%);
+  border-radius: 0.5rem;
+  border: 2px solid $secondary-colour;
+  padding: 1rem;
+  margin: 0;
+  color: darken($secondary-colour, 10%);
+
+  a,
+  a:visited {
+    color: $accent-colour;
+  }
+}

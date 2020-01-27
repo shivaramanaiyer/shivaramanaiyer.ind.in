@@ -31,12 +31,13 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
-            <h1>{post.title}</h1>
+            <h1 clssName="page-title">{post.title}</h1>
             <PostTags tags={post.tags} />
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <SocialLinks postPath={slug} postNode={postNode} />
-              <SiblingLinks config={pageContext} />
+              {console.log(post)}
+              <SiblingLinks config={pageContext} isArchived={post.archived} />
             </div>
             <UserInfo config={config} />
             <Disqus postNode={postNode} />
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
         edited
         categories
         tags
+        archived
       }
       fields {
         slug

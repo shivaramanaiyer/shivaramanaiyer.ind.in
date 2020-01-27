@@ -27,6 +27,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+      if (
+        Object.prototype.hasOwnProperty.call(node.frontmatter, "archived") &&
+        node.frontmatter.archived
+      )
+        slug = `/archive` + slug;
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "created")) {
         const date = moment(
           node.frontmatter.created,
@@ -118,7 +123,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Post page creating
   const posts = postsEdges.filter(
-    post => post.node.frontmatter.layout == "post"
+    post =>
+      post.node.frontmatter.layout == "post" && !post.node.frontmatter.archived
   );
 
   posts.forEach((edge, index) => {
@@ -139,6 +145,32 @@ exports.createPages = async ({ graphql, actions }) => {
     const nextID = index - 1 >= 0 ? index - 1 : posts.length - 1;
     const nextEdge = posts[nextID];
     const prevEdge = posts[prevID];
+
+    createPage({
+      path: edge.node.fields.slug,
+      component: postPage,
+      context: {
+        slug: edge.node.fields.slug,
+        nexttitle: nextEdge.node.frontmatter.title,
+        nextslug: nextEdge.node.fields.slug,
+        prevtitle: prevEdge.node.frontmatter.title,
+        prevslug: prevEdge.node.fields.slug
+      }
+    });
+  });
+
+  // Post page creating
+  const archives = postsEdges.filter(
+    post =>
+      post.node.frontmatter.layout == "post" && post.node.frontmatter.archived
+  );
+
+  archives.forEach((edge, index) => {
+    // Create post pages
+    const prevID = index + 1 < archives.length ? index + 1 : 0;
+    const nextID = index - 1 >= 0 ? index - 1 : archives.length - 1;
+    const nextEdge = archives[nextID];
+    const prevEdge = archives[prevID];
 
     createPage({
       path: edge.node.fields.slug,
