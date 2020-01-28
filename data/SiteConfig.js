@@ -12,7 +12,7 @@ const config = {
   googleAnalyticsID: "", // GA tracking ID.
   disqusShortname: "", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
-  dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
+  dateFromFormat: "YYYY-MM-DD HH:mm:ss Z", // Date format used in the frontmatter.
   dateFormat: "DD-MM-YYYY", // Date format for display.
   postsPerPage: 10, // Amount of posts displayed per listing page.
   userName: "Shivaraman", // Username to display in the author segment.

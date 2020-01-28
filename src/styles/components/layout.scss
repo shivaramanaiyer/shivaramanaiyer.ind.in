@@ -4,7 +4,7 @@ nav {
   top: 0;
   left: 0;
   padding: 2rem 0;
-  background-color: #ffffff;
+  background-color: $background-colour;
 
   .nav-container {
     max-width: $max-width;
@@ -29,6 +29,11 @@ nav {
     margin: 0 1rem;
     display: flex;
     align-items: center;
+  }
+
+  a,
+  a:visited {
+    color: $link-colour;
   }
 }
 
@@ -85,11 +90,7 @@ h1.page-title {
   */
 .post-item {
   padding: 1rem;
-  background-color: lighten(pink, 5%);
-  color: $primary-colour;
-  border: 2px solid maroon;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  color: $font-colour;
 
   .post-name {
     margin-bottom: 0.5rem;
@@ -97,11 +98,23 @@ h1.page-title {
   }
 
   .post-details {
-    font-size: 0.85rem;
-    padding: 0 0.5rem;
     display: flex;
     justify-content: space-between;
   }
+
+  .post-time,
+  .post-excerpt {
+    font-size: 0.85rem;
+  }
+
+  .post-excerpt {
+    padding: 0 0.5rem;
+  }
+}
+
+.post-item:hover {
+  background-color: $primary-colour;
+  color: $background-colour;
 }
 
 /**

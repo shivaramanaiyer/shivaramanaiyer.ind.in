@@ -28,13 +28,13 @@ class PostListing extends React.Component {
         postList.map(post => (
           <Link to={post.path} key={post.title}>
             <div className="post-item">
-              <div className="post-name">{post.title}</div>
               <div className="post-details">
-                <div className="post-excerpt">{post.excerpt}</div>
+                <div className="post-name">{post.title}</div>
                 <div className="post-time">
                   {moment(post.created, SiteConfig.dateFromFormat).fromNow()}
                 </div>
               </div>
+              <div className="post-excerpt">{post.excerpt}</div>
             </div>
           </Link>
         ))}

@@ -35,7 +35,7 @@ export const query = graphql`
     allMarkdownRemark(
       sort: { fields: frontmatter___created, order: DESC }
       filter: {
-        frontmatter: { layout: { eq: "post" }, archived: { eq: false } }
+        frontmatter: { layout: { eq: "post" }, archived: { ne: true } }
       }
     ) {
       edges {
