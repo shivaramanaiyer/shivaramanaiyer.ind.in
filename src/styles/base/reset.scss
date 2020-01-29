@@ -25,12 +25,13 @@ blockquote {
   background-color: lighten($secondary-colour, 25%);
   border-radius: 0.5rem;
   border: 2px solid $secondary-colour;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   margin: 2rem 0;
   color: darken($secondary-colour, 25%);
 
   a,
   a:visited {
-    color: $link-colour;
+    color: darken($secondary-colour, 25%);
+    font-weight: bold;
   }
 }

@@ -58,7 +58,9 @@ export const query = graphql`
   {
     allMarkdownRemark(
       limit: 5
-      filter: { frontmatter: { archived: { eq: false } } }
+      filter: {
+        frontmatter: { archived: { ne: true }, layout: { eq: "post" } }
+      }
       sort: { fields: fields___created, order: DESC }
     ) {
       edges {
@@ -67,8 +69,12 @@ export const query = graphql`
             created
             slug
           }
+          excerpt
           frontmatter {
             title
+            thumbnail {
+              publicURL
+            }
           }
         }
       }

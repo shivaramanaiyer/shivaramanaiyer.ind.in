@@ -4,6 +4,7 @@ edited: 2020-01-19
 title: The start with Krita
 layout: post
 archived: true
+thumbnail: ../images/thumbnail/krita-logo.png
 categories:
   - Krita
 tags:

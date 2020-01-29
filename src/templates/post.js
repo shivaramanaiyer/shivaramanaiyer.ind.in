@@ -1,15 +1,15 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+import moment from "moment";
 import Layout from "../layout";
-import UserInfo from "../components/UserInfo";
 import Disqus from "../components/Disqus";
 import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks";
 import SiblingLinks from "../components/SiblingLinks";
 import SEO from "../components/SEO";
-import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
+import blankWhite from "../../content/images/thumbnail/blank.png";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -17,12 +17,18 @@ export default class PostTemplate extends React.Component {
     const { slug } = pageContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
+    let thumbnail;
     if (!post.id) {
       post.id = slug;
     }
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
     }
+
+    if (post.thumbnail) {
+      thumbnail = post.thumbnail.publicURL;
+    }
+
     return (
       <Layout>
         <div className="container">
@@ -31,17 +37,37 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <article className="post-content">
-            <h1 clssName="page-title">{post.title}</h1>
-            <PostTags tags={post.tags} />
+            <div className="post-head">
+              <div className="post-thumbnail">
+                <img
+                  src={post.thumbnail ? post.thumbnail.publicURL : blankWhite}
+                  alt={post.title}
+                />
+              </div>
+
+              <div className="post-meta">
+                <h1 className="post-title">{post.title}</h1>
+                <div className="post-date">
+                  Written on:{" "}
+                  {moment(post.created, config.dateFromFormat).format(
+                    config.dateFormat
+                  )}{" "}
+                  {post.edited &&
+                    `| Edited on: ` +
+                      moment(post.edited, config.dateFromFormat).format(
+                        config.dateFormat
+                      )}
+                </div>
+                <PostTags tags={post.tags} />
+              </div>
+            </div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
+            <div className="post-footer">
               <SocialLinks postPath={slug} postNode={postNode} />
               {console.log(post)}
               <SiblingLinks config={pageContext} isArchived={post.archived} />
             </div>
-            <UserInfo config={config} />
             <Disqus postNode={postNode} />
-            <Footer config={config} />
           </article>
         </div>
       </Layout>
@@ -63,6 +89,9 @@ export const pageQuery = graphql`
         categories
         tags
         archived
+        thumbnail {
+          publicURL
+        }
       }
       fields {
         slug

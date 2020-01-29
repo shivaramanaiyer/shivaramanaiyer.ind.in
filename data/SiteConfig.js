@@ -27,17 +27,17 @@ const config = {
     {
       label: "GitHub",
       url: "https://github.com/shivaramanaiyer",
-      iconClassName: "fa fa-github"
+      imagePath: "/logos/github.png"
     },
     {
       label: "Twitter",
       url: "https://twitter.com/shivaramanaiyer",
-      iconClassName: "fa fa-twitter"
+      imagePath: "/logos/twitter.png"
     },
     {
       label: "Email",
       url: "mailto:hello@shivaramanaiyer.dev",
-      iconClassName: "fa fa-envelope"
+      imagePath: "/logos/email.png"
     }
   ],
   menuItems: [
@@ -50,6 +50,7 @@ const config = {
       to: "/blog"
     }
   ],
+  copyright: "Copyright © 2019. Shivaraman Aiyer", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#ffffff" // Used for setting manifest background color.
 };

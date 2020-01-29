@@ -3,19 +3,23 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2rem 0;
   background-color: $background-colour;
+  z-index: 1;
 
   .nav-container {
     max-width: $max-width;
-    padding: 2rem;
+    height: 100px;
+    padding: 0 1.5rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
 
     .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       a {
         text-decoration: none;
         font-size: 2rem;
@@ -44,6 +48,7 @@ nav {
 .main-content {
   margin-top: 6rem;
   padding-top: 2rem;
+  min-height: calc(100vh - 133px);
 }
 
 .container {
@@ -91,6 +96,15 @@ h1.page-title {
 .post-item {
   padding: 1rem;
   color: $font-colour;
+  display: flex;
+
+  .post-thumbnail {
+    width: 50px;
+    margin-right: 0.5rem;
+    img {
+      max-width: 100%;
+    }
+  }
 
   .post-name {
     margin-bottom: 0.5rem;
@@ -98,6 +112,10 @@ h1.page-title {
   }
 
   .post-details {
+    flex: 1 1;
+  }
+
+  .post-header {
     display: flex;
     justify-content: space-between;
   }
@@ -125,6 +143,7 @@ h1.page-title {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  margin: 1rem 0;
 
   .prev::before {
     content: "<";
@@ -138,12 +157,56 @@ h1.page-title {
 /**
   * Posts
   */
-.post-content img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid $primary-colour;
-  border-radius: 0.5rem;
-  box-shadow: inset 0 0 2rem $primary-colour;
-  padding: 1rem;
+.post-content {
+  .post-head {
+    display: flex;
+
+    .post-thumbnail {
+      max-width: 150px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .post-date {
+      margin-bottom: 1rem;
+    }
+
+    .post-tag-container a {
+      padding: 0.5rem;
+    }
+  }
+
+  .gatsby-resp-image-wrapper img {
+    border: 2px solid $primary-colour;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 2rem $primary-colour !important;
+    padding: 1rem;
+  }
+  figcaption {
+    text-align: center;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+/**
+  * Footer
+  */
+footer {
+  padding: 1rem 0;
+  .user-links {
+    a {
+      margin: 0 0.5rem;
+
+      img {
+        max-width: 30px;
+      }
+    }
+  }
 }

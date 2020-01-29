@@ -45,6 +45,9 @@ export const query = graphql`
             categories
             title
             tags
+            thumbnail {
+              publicURL
+            }
           }
           parent {
             ... on File {

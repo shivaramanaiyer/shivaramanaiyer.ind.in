@@ -50,6 +50,9 @@ export const query = graphql`
             categories
             title
             tags
+            thumbnail {
+              publicURL
+            }
             categories
           }
           parent {

@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import SEO from "../components/SEO";
-import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
 
 export default class PostTemplate extends React.Component {
@@ -22,7 +21,6 @@ export default class PostTemplate extends React.Component {
           <div>
             <h1 className="page-title">{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <Footer config={config} />
           </div>
         </div>
       </Layout>

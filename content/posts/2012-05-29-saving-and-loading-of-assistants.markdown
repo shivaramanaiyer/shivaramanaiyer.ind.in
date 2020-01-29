@@ -3,6 +3,7 @@ created: 2012-05-29
 edited: 2020-01-19
 title: Saving and Loading of Assistants
 layout: post
+thumbnail: ../images/thumbnail/krita-logo.png
 archived: true
 categories:
   - GSoC

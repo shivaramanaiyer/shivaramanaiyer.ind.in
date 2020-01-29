@@ -3,6 +3,7 @@ created: 2013-05-21
 edited: 2020-01-19
 title: Grid + Assistant = Awesome Perspective Assistant
 layout: post
+thumbnail: ../images/thumbnail/krita-logo.png
 archived: true
 categories:
   - Krita
