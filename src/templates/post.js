@@ -86,7 +86,7 @@ export const pageQuery = graphql`
         title
         created
         edited
-        categories
+        category
         tags
         archived
         thumbnail {

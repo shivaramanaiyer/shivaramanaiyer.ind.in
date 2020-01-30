@@ -5,9 +5,7 @@ title: Saving and Loading of Assistants
 layout: post
 thumbnail: ../images/thumbnail/krita-logo.png
 archived: true
-categories:
-  - GSoC
-  - Krita
+category: GSoC
 ---
 
 My first work in Krita, was to add the feature of saving and loading of the Assistant tools. Krita has four Assistant tools - Ellipse, Spline, Perspective and Ruler. As their name suggest each Assistant is used to make an Assistant having shape of an ellipse, curve, quadrilateral grid and a line respectively. The purpose of these Assistants is to make a complex 3D mesh which can be painted on. Now, suppose someone has created a very complex structure of these assistants, but, has to shutdown his/her computer, (s)he would loose all the created assistants as there was no implementation of saving the Assistants. Here, is where my work came in.

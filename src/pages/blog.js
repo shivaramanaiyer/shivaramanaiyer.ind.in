@@ -47,13 +47,13 @@ export const query = graphql`
           excerpt
           frontmatter {
             created
-            categories
+            category
             title
             tags
             thumbnail {
               publicURL
             }
-            categories
+            category
           }
           parent {
             ... on File {

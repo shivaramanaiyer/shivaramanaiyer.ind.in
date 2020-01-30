@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               title
               tags
-              categories
+              category
               created
               layout
             }

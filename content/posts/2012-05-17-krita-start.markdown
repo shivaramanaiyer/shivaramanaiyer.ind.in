@@ -5,8 +5,7 @@ title: The start with Krita
 layout: post
 archived: true
 thumbnail: ../images/thumbnail/krita-logo.png
-categories:
-  - Krita
+category: Krita
 tags:
   - gsoc
   - krita

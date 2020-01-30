@@ -5,8 +5,7 @@ title: Grid + Assistant = Awesome Perspective Assistant
 layout: post
 thumbnail: ../images/thumbnail/krita-logo.png
 archived: true
-categories:
-  - Krita
+category: Krita
 tags:
   - perspective assistant
 ---

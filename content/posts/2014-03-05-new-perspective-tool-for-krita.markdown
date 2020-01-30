@@ -5,8 +5,7 @@ title: New Perspective Tool for Krita
 layout: post
 thumbnail: ../images/thumbnail/krita-logo.png
 archived: true
-categories:
-  - Krita
+category: Krita
 ---
 
 I have been meaning to right about this fabulous new tool that is the brain child of none other than [David Revoy](davidrevoy.com) (the mockup of the same can be seen @ [New Perspective Tool](https://davidrevoy.com/article159/design-ideas-for-a-new-krita-perspective-tool)). Well, like many of you out there I am also mesmerized by this new tool, but, upon me is the task of making this tool and make it a part of the already amazing Krita.

@@ -42,7 +42,7 @@ export const query = graphql`
           excerpt
           frontmatter {
             created
-            categories
+            category
             title
             tags
             thumbnail {
