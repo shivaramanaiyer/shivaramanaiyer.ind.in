@@ -69,6 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
               category
               created
               layout
+              archived
             }
           }
         }
