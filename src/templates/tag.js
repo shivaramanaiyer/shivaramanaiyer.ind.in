@@ -42,6 +42,9 @@ export const pageQuery = graphql`
             title
             tags
             created
+            thumbnail{
+              publicURL
+            }
           }
         }
       }

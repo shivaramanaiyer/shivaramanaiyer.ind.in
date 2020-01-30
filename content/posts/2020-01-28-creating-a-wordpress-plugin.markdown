@@ -10,4 +10,4 @@ tags:
   - wordpress
 ---
 
-This is a dummy
+This is the next post to come through. Please wait for the content.

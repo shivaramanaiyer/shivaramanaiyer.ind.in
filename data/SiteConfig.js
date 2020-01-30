@@ -12,16 +12,13 @@ const config = {
   googleAnalyticsID: "", // GA tracking ID.
   disqusShortname: "", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
-  dateFromFormat: "YYYY-MM-DD HH:mm:ss Z", // Date format used in the frontmatter.
+  dateFromFormat: "YYYY-MM-DD HH:mm:ss", // Date format used in the frontmatter.
   dateFormat: "DD-MM-YYYY", // Date format for display.
   postsPerPage: 10, // Amount of posts displayed per listing page.
   userName: "Shivaraman", // Username to display in the author segment.
   userEmail: "hello@shivaramanaiyer.dev", // Email used for RSS feed's author segment
   userTwitter: "shivaramanaiyer", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "North Pole, Earth", // User location to display in the author segment.
-  userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
-  userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+  userLocation: "Bangalore, India", // User location to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
@@ -50,9 +47,8 @@ const config = {
       to: "/blog"
     }
   ],
-  copyright: "Copyright © 2019. Shivaraman Aiyer", // Copyright string for the footer of the website and RSS feed.
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#ffffff" // Used for setting manifest background color.
+  themeColor: "#3c91e6", // Used for setting manifest and progress theme colors.
+  backgroundColor: "#fafffd" // Used for setting manifest background color.
 };
 
 // Validate
