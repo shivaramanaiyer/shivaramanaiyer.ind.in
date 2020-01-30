@@ -128,10 +128,6 @@ h1.page-title {
   .post-excerpt {
     padding: 0 0.5rem;
   }
-
-  .post-body{
-    min-height:calc(100vh - 510px);
-  }
 }
 
 .post-item:hover {
@@ -182,6 +178,10 @@ h1.page-title {
       padding: 0.5rem;
       color:$tertiary-colour
     }
+  }
+
+  .post-body{
+    min-height:calc(100vh - 510px);
   }
 
   .gatsby-resp-image-wrapper img {
