@@ -6,17 +6,22 @@
 
 /* Colours */
 
-$background-colour: #fafffd;
-$font-colour: #342e37;
-$primary-colour: #3c91e6;
-$secondary-colour: #f2dd6e;
-$tertiary-colour: #004e89;
-$green: #9fd356;
-$red: #c1292e;
-$grey: #d5d5d5;
+$background-colour:     #FFFFFF;
+$primary-colour-dark:   #512DA8;
+$primary-colour:        #673AB7;
+$primary-colour-light:  #D1C4E9;
+$primary-colour-text:   #FFFFFF;
+$accent-colour-dark:    #F50057;
+$accent-colour:         #FF4081;
+$accent-colour-light:   #FF80AB;
+$primary-text-colour:   #212121;
+$secondary-text-colour: #757575;
+$divider-colour:        #BDBDBD;
+
+$green: #9FD356;
+$red: #C1292E;
+$grey: #D5D5D5;
 
 $max-width: 1200px;
 
-$primary-hover: lighten($primary-colour, 25%);
-$secondary-hover: lighten($secondary-colour, 25%);
-$link-colour: $primary-colour;
+$link-colour: $accent-colour;

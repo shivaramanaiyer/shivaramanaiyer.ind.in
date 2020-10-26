@@ -1,9 +1,11 @@
 // Reset box sizing to border box
 html {
   box-sizing: border-box;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color: $font-colour;
+  font-family: serif;
+  color: $primary-text-colour;
   background-color: $background-colour;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 *,
@@ -19,19 +21,20 @@ h4,
 h5,
 h6 {
   color: $primary-colour;
+  line-height: 1.5;
 }
 
 blockquote {
-  background-color: lighten($secondary-colour, 25%);
+  background-color: $accent-colour-light;
   border-radius: 0.5rem;
-  border: 2px solid $secondary-colour;
+  border: 2px solid $accent-colour-dark;
   padding: 0.5rem 1.5rem;
   margin: 2rem 0;
-  color: darken($secondary-colour, 25%);
+  color: $primary-text-colour;
 
   a,
   a:visited {
-    color: darken($secondary-colour, 25%);
+    color: $accent-colour;
     font-weight: bold;
   }
 }

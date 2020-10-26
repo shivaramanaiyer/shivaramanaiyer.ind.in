@@ -37,7 +37,7 @@ nav {
 
   a,
   a:visited {
-    color: $link-colour;
+    color: $primary-colour;
   }
 }
 
@@ -75,19 +75,6 @@ h1.page-title {
   align-items: center;
   padding: 2rem;
   border-radius: 0.5rem;
-
-  .left {
-    flex: 1 1;
-    margin-right: 2.5rem;
-
-    img {
-      width: 100%;
-      border-radius: 50%;
-    }
-  }
-  .right {
-    flex: 4 1;
-  }
 }
 
 /**
@@ -95,7 +82,7 @@ h1.page-title {
   */
 .post-item {
   padding: 1rem;
-  color: $font-colour;
+  color: $primary-text-colour;
   display: flex;
 
   .post-thumbnail {
@@ -161,6 +148,7 @@ h1.page-title {
 .post-content {
   .post-head {
     display: flex;
+    padding: 0 0 1rem 0;
 
     .post-thumbnail {
       max-width: 150px;
@@ -176,19 +164,21 @@ h1.page-title {
 
     .post-tag-container a {
       padding: 0.5rem;
-      color:$tertiary-colour
+      color: $accent-colour;
     }
   }
 
-  .post-body{
-    min-height:calc(100vh - 510px);
+  .post-body {
+    min-height: calc(100vh - 510px);
   }
 
-  .gatsby-resp-image-wrapper img {
-    border: 2px solid $primary-colour;
-    border-radius: 0.5rem;
-    box-shadow: inset 0 0 2rem $primary-colour !important;
-    padding: 1rem;
+  .gatsby-resp-image-wrapper {
+    margin: 2rem;
+    
+    img {
+      border-radius: 0.5rem;
+      box-shadow: 0 0 2rem $primary-colour !important;
+    }
   }
   figcaption {
     text-align: center;

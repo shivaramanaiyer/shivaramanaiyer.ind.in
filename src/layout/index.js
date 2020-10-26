@@ -13,6 +13,7 @@ export default class MainLayout extends React.Component {
         <Helmet>
           <meta name="description" content={config.siteDescription} />
           <html lang="en" />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet" />
         </Helmet>
         <Navigation menuItems={config.menuItems} />
         <main className="main-content">{children}</main>
