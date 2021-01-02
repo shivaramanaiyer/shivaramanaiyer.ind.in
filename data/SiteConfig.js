@@ -4,12 +4,10 @@ const config = {
   siteTitleAlt: "Shivaraman Aiyer", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://shivaramanaiyer.dev", // Domain of your website without pathPrefix.
-  pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
     "Shivaraman Aiyer is a Full Stack developer specialized in Javascript and interested in Cybersecurity.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteFBAppID: "", // FB Application ID for using app insights
-  googleAnalyticsID: "", // GA tracking ID.
   disqusShortname: "", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD HH:mm:ss", // Date format used in the frontmatter.
@@ -55,7 +53,7 @@ const config = {
 
 // Make sure pathPrefix is empty if not needed
 if (config.pathPrefix === "/") {
-  config.pathPrefix = "";
+  config.pathPrefix = "/";
 } else {
   // Make sure pathPrefix only contains the first forward slash
   config.pathPrefix = `/${config.pathPrefix.replace(/^\/|\/$/g, "")}`;
