@@ -4,10 +4,8 @@ slug: self
 layout: page
 ---
 
-Hello! I am Shivaraman Aiyer, a Full-Stack Developer, experienced with work with PHP, Node.js, React.js, Android and Wordpress.
+Having thought about this page a thousand times over and never finding the right way to say things, here is all the not so right ways to describe myself.
 
-I currently am working with [Funbim SAS](https://www.funbim.com) as a remote Android and Full-Stack Web developer. I am mainly working on PHP, Yii 1.1 and ReactJs these days and learning about Cybersecurity through the edx.org course on [Cybersecurity Micro Masters](https://www.edx.org/micromasters/ritx-cybersecurity)
+I am a Full-Stack developer who is looking into break into the Cybersecurity world. Full-stack wise, I believe I am good with PHP, JavaScript, Node.js, React.js, Android and Wordpress as these are the frameworks and languages I have been working with for the majority of the last decade.
 
-With this website, I hope to keep it running for the foreseeable future and really hope that you find at least one thing that you are interested about.
-
-> This is by no means a complete site at the moment and will have more information coming in the future...
+With this website, I want to make it a habit of writing down things that I have worked on as a general log. So things like, CTF write-ups, general concepts of programming, security, photography maybe and others that I feel like writing about.

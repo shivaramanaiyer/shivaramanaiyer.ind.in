@@ -19,8 +19,8 @@ class IndexPage extends Component {
               <PostListing postEdges={edges} />
             ) : (
               <div>
-                No recent articles found. Please visit{" "}
-                <Link to="/archives">Archives</Link> to view archived articles
+                No new articles found. Please visit{" "}
+                <Link to="/archives">Archives</Link> to view articles that I have merged from my old blog.
               </div>
             )}
           </div>

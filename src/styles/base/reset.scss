@@ -1,7 +1,7 @@
 // Reset box sizing to border box
 html {
   box-sizing: border-box;
-  font-family: serif;
+  font-family: sans-serif;
   color: $primary-text-colour;
   background-color: $background-colour;
   font-size: 18px;
@@ -25,16 +25,17 @@ h6 {
 }
 
 blockquote {
-  background-color: $accent-colour-light;
+  background-color: $primary-colour-light;
   border-radius: 0.5rem;
-  border: 2px solid $accent-colour-dark;
+  border: 2px solid $primary-colour-dark;
   padding: 0.5rem 1.5rem;
   margin: 2rem 0;
   color: $background-colour;
+  font-weight: 100;
 
   a,
   a:visited {
-    color: $accent-colour;
+    color: $background-colour;
     font-weight: bold;
   }
 }

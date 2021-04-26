@@ -30,9 +30,9 @@ const config = {
       imagePath: "/logos/twitter.png"
     },
     {
-      label: "Email",
-      url: "mailto:hello@shivaramanaiyer.dev",
-      imagePath: "/logos/email.png"
+      label: "LinkedIn",
+      url: "https://linkedin.com/in/shivaramanaiyer",
+      imagePath: "/logos/linkedin.png"
     }
   ],
   menuItems: [
