@@ -1,14 +1,18 @@
 ---
-created: 2021-04-29
+created: 2021-05-11
+edited: 2021-05-11
 title: The magic of being consistent
 layout: post
 category: thought
 tags:
+  - 100DaysOfX
+  - consistent
+  - productive
 ---
 
-Just today I realised something, I have been waking up nearly everyday for the 86 days (since we moved to Canada), without snoozing my alarm. There have been a few days where I have snoozed it for another 5 mins but seldom more. And that made me realise something. For the first time since I heard about the [#100daysofX](https://www.100daysofx.com/), I was actually close to doing something consistently for a 100 days and I wasn't even thinking about this challenge.
+Lastnight I realised something, I have been waking up nearly everyday for the last 86 days (since we moved to Canada), without snoozing my alarm. There have been a few days where I have snoozed it for another 5 mins but seldom more. And that made me realise something. For the first time since I heard about the [#100daysofX](https://www.100daysofx.com/), I was actually close to doing something consistently for a 100 days and I wasn't even thinking about making this challenge.
 
-In the past, I have tried to do the 100 days of X challenge in some aspects of my life without success. But, today, I wanted to know the reason behind my consistency for the last 86 days! You may be thinking, well I wake up everyday on the first sound of my alarm. What is so special about you? Nothing special. It is great that you have been able to achieve this already. But for me, in the past, waking up at 5 AM in the morning seemed like an impossible task. But today, I can say that I can complete my sleep and wake up fresh at any time, like I have been waking up at 2:30 AM (not relevant to this post) for the last 3 weeks, without a problem.
+In the past, I have tried to do the 100 days of X challenge in some aspects of my life without any success. But today, I wanted to find the reason behind my consistency for the last 86 days! You may be thinking, well I wake up everyday on the first sound of my alarm. What is so special about you? Nothing special. It is great that you have been able to achieve this already. But for me, in the past, waking up at 5 AM in the morning seemed like an impossible task. But today, I can say that I can complete my sleep(at least 7 hours) and wake up fresh at any time, like I have been waking up at 2:30 AM (not relevant to this post) for the last 3 weeks, without a problem.
 
 ## So let's just get right into it!
 
@@ -28,4 +32,4 @@ So for the first few days, jetlag helped in making it difficult to sleep beyond 
 
 In order to start something new, something you've never done before, you need to stay motivated. It doesn't have to be an active motivation, could be a passive one, like the first few days in my case. But, once your ride the first few days in this new habit, I am sure it will be like second nature and you will never look back.
 
-I know now what I need to do to be consistent with any change I want to achieve in myself.
+I know now what I need to do to be consistent with any change I want to achieve in myself. What am I going to do next? Stay tuned!

@@ -6,6 +6,10 @@
 
 a,
 a:visited {
-  color: $link-colour;
+  color: $accent-colour;
   font-weight: bold;
+}
+
+a:hover {
+  color: $accent-colour-dark
 }

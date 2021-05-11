@@ -6,7 +6,7 @@ class PostTags extends Component {
   render() {
     const { tags } = this.props;
     return (
-      <div className="post-tag-container">
+      <small className="post-tag-container">
         {tags && `Tags:`}
         {tags &&
           tags.map(tag => (
@@ -18,7 +18,7 @@ class PostTags extends Component {
               {tag}
             </Link>
           ))}
-      </div>
+      </small>
     );
   }
 }
